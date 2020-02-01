@@ -1,10 +1,10 @@
-### Introduction
+### Вступление
 
-Nest (NestJS) is a framework for building efficient, scalable [Node.js](https://nodejs.org/) server-side applications. It uses progressive JavaScript, is built with and fully supports [TypeScript](http://www.typescriptlang.org/) (yet still enables developers to code in pure JavaScript) and combines elements of OOP (Object Oriented Programming), FP (Functional Programming), and FRP (Functional Reactive Programming).
+Nest (NestJS) это фреймворк для построения эффективных, масштабируемых сервер-сайд приложений. В нем используется прогрессивный JavaScript, он разработан на [TypeScript](http://www.typescriptlang.org/) и полностью его поддерживает (тем не менее позволяет разработчикам писать код на чистом JavaScript) и комбинирует в себе элементы ООП (Объектно ориентированное программирование), ФП (Функциональное программирование) и ФРП (Функционально-реактивное программирование).
 
-Under the hood, Nest makes use of robust HTTP Server frameworks like [Express](https://expressjs.com/) (the default) and optionally can be configured to use [Fastify](https://github.com/fastify/fastify) as well!
+Под капотом использует надежные HTTP фреймворки такие как [Express](https://expressjs.com/) (по умолчанию) и по желанию может быть сконфигурирован на использвание [Fastify](https://github.com/fastify/fastify).
 
-Nest provides a level of abstraction above these common Node.js frameworks (Express/Fastify), but also exposes their APIs directly to the developer. This allows developers the freedom to use the myriad of third-party modules which are available for the underlying platform.
+Nest предоставляет уровень абстракции над этими Node.js фреймворками (Express/Fastify), но так же предоставляет их API для разработчика. Это позволяет разработчикам свободно использвать большое множество сторонних модулей которые доступны для базовой платформы.
 
 #### Philosophy
 
