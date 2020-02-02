@@ -1,27 +1,27 @@
-### First steps
+### Первые шаги
 
-In this set of articles, you'll learn the **core fundamentals** of Nest. To get familiar with the essential building blocks of Nest applications, we'll build a basic CRUD application with features that cover a lot of ground at an introductory level.
+В этом наборе статей вы узнаете **основные принципы** Nest. Чтобы ознакомиться с основными строительными блоками приложений Nest, мы создадим базовое приложение CRUD с функциями, которые охватывают большую часть начального уровня.
 
-#### Language
+#### Язык
 
-We're in love with [TypeScript](http://www.typescriptlang.org/), but above all - we love [Node.js](https://nodejs.org/en/). That's why Nest is compatible with both TypeScript and **pure JavaScript**. Nest takes advantage of the latest language features, so to use it with vanilla JavaScript we need a [Babel](http://babeljs.io/) compiler.
+Мы влюблены в [TypeScript](http://www.typescriptlang.org/), но прежде всего - мы любим [Node.js](https://nodejs.org/en/). Это причина по которой Nest совместим как с TypeScript, так и с **чистым JavaScript**. В Nest применяются свежие возможности языка, поэтому чтобы писать на JavaScript нужно использовать [Babel](http://babeljs.io/).
 
-We'll mostly use TypeScript in the examples we provide, but you can always **switch the code snippets** to vanilla JavaScript syntax (simply click to toggle the language button in the upper right hand corner of each snippet).
+В наших примерах мы в основном будем используем TypeScript, но вы всегда можете **переключить фрагменты кода** на JavaScript, просто кликнув на кнопку переключения языка в верхнем правом углу фрагмента.
 
-#### Prerequisites
+#### Обязательные требования
 
-Please make sure that [Node.js](https://nodejs.org/) (>= 8.9.0) is installed on your operating system.
+Пожалуйста убедитесь что в вашей ОС установлена [Node.js](https://nodejs.org/) (>= 8.9.0).
 
 #### Setup
 
-Setting up a new project is quite simple with the [Nest CLI](/cli/overview). With [npm](https://www.npmjs.com/) installed, you can create a new Nest project with the following commands in your OS terminal:
+Создать новый проект очень просто с [Nest CLI](/cli/overview). С помощью [npm](https://www.npmjs.com/) вы можете создать новый Nest проект выполнив следующие команды в вашем терминале.
 
 ```bash
 $ npm i -g @nestjs/cli
-$ nest new project-name
+$ nest new project
 ```
 
-The `project` directory will be created, node modules and a few other boilerplate files will be installed, and a `src/` directory will be created and populated with several core files.
+Будет создана директория `project`, в ней node_modules, так же несколько шаблонных файлов, и директория `src/` с несколькими основными файлами.
 
 <div class="file-tree">
   <div class="item">src</div>
@@ -32,13 +32,13 @@ The `project` directory will be created, node modules and a few other boilerplat
   </div>
 </div>
 
-Here's a brief overview of those core files:
+Вот краткое описание этих файлов:
 
-|                     |                                                                                                                     |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `app.controller.ts` | Basic controller sample with a single route.                                                                        |
-| `app.module.ts`     | The root module of the application.                                                                                 |
-| `main.ts`           | The entry file of the application which uses the core function `NestFactory` to create a Nest application instance. |
+|                     |                                                                                                   |
+| ------------------- | --------------------------------------------------------------------------------------------------|
+| `app.controller.ts` | Базовый образец контрллера с одним маршрутом.                                                     |
+| `app.module.ts`     | Корневой модуль приложения.                                                                       |
+| `main.ts`           | Точка входа в которой используется функция `NestFactory` для создания экземпляра Nest приложения. |
 
 The `main.ts` includes an async function, which will **bootstrap** our application:
 
@@ -64,33 +64,33 @@ async function bootstrap() {
 bootstrap();
 ```
 
-To create a Nest application instance, we use the core `NestFactory` class. `NestFactory` exposes a few static methods that allow creating an application instance. The `create()` method returns an application object, which fulfills the `INestApplication` interface. This object provides a set of methods which are described in the coming chapters. In the `main.ts` example above, we simply start up our HTTP listener, which lets the application await inbound HTTP requests.
+Для создания экземпляра Nest приложения мы используем класс `NestFactory`. У `NestFactory` есть статические методы которые позволяют создать экземпляр приложения. Метод `create()` возвращает объект приложения, который соответствует `INestApplication` интерфейсу. Этот объект предоставляет набор методов которые описаны в следующих главах. В примере выше (`main.ts`) мы просто запускаем HTTP слушатель, который позволяет приложению ожидать входящие HTTP запросы.
 
-Note that a project scaffolded with the Nest CLI creates an initial project structure that encourages developers to follow the convention of keeping each module in its own dedicated directory.
+Обратите внимание что проект созданный через Nest CLI создает начальную структуру проекта которая побуждает разработчиков придерживаться соглашения о сохранении каждого модуля в отдельной директории.
 
-#### Platform
+#### Платформа
 
-Nest aims to be a platform-agnostic framework. Platform independence makes it possible to create reusable logical parts that developers can take advantage of across several different types of applications. Technically, Nest is able to work with any Node HTTP framework once an adapter is created. There are two HTTP platforms supported out-of-the-box: [express](https://expressjs.com/) and [fastify](https://www.fastify.io). You can choose the one that best suits your needs.
+Nest стремится быть платформо-независимым фреймворком. Независимость от платформы делает возможным создание переиспользуемых частей логики которые разработчики могут использовать в разных приложениях. Технически, Nest может работать с любым Nodejs HTTP фреймворком если написать для него адаптер. Из коробки Nest поддерживает два HTTP фреймворка [express](https://expressjs.com/) и [fastify](https://www.fastify.io). Вы можете выбрать тот, который лучше всего соответствует вашим потребностям.
 
 |                    |                                                                                                                                                                                                                                                                                                                                    |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `platform-express` | [Express](https://expressjs.com/) is a well-known minimalist web framework for node. It's a battle tested, production-ready library with lots of resources implemented by the community. The `@nestjs/platform-express` package is used by default. Many users are well served with Express, and need take no action to enable it. |
-| `platform-fastify` | [Fastify](https://www.fastify.io/) is a high performance and low overhead framework highly focused on providing maximum efficiency and speed. Read how to use it [here](/techniques/performance).                                                                                                                                  |
+| `platform-express` | [Express](https://expressjs.com/) - хорошо известный, минималистичный, веб фреймворк для Nodejs. Проверена в бою, готовая к работе библиотека с большим количеством пакетов реализованных ее сообществом. Пакет `@nestjs/platform-express` используется по умолчанию. Многим хорошо подходит Express, и им не нужно предпринимать ни каких действий, чтобы включить его. |
+| `fastify` | [Fastify](https://www.fastify.io/) - высокопроизводительный и low overhead фреймворк сосредоточенный на максимльной эффективности и скорости. Как его использовать можно [прочитать здесь](/techniques/performance).                                                                                                                                  |
 
-Whichever platform is used, it exposes its own application interface. These are seen respectively as `NestExpressApplication` and `NestFastifyApplication`.
+Какая бы платформа не использовалась, она предоставляет свой API. Соответственно как `NestExpressApplication` и `NestFastifyApplication`.
 
-When you pass a type to the `NestFactory.create()` method, as in the example below, the `app` object will have methods available exclusively for that specific platform. Note, however, you don't **need** to specify a type **unless** you actually want to access the underlying platform API.
+Когда вы передаете тип в метод `NestFactory.create()`, так как показана в примере ниже, объект приложения (`app`) будет иметь методы доступные исключительно для конкретной платформы. Однака вам **не нужно** указывать тип, если вы не хотите получать доступ к API базовой платформе.
 
 ```typescript
 const app = await NestFactory.create<NestExpressApplication>(AppModule);
 ```
 
-#### Running the application
+#### Маршрутизация приложения
 
-Once the installation process is complete, you can run the following command at your OS command prompt to start the application listening for inbound HTTP requests:
+После завершения процесса установки, вы можете выполнить следующую команду терминале вашей ОС, чтобы запустить сервер на прослушивание входящих HTTP запросов:
 
 ```bash
 $ npm run start
 ```
 
-This command starts the app with the HTTP server listening on the port defined in the `src/main.ts` file. Once the application is running, open your browser and navigate to `http://localhost:3000/`. You should see the `Hello World!` message.
+Эта команда запускает HTTP server, который слушает входящие запросы по порту определенном в файле `src/main.ts`. После запуска приложения откройте выш браузер и перейдите по адресу `http://localhost:3000/`. Вы должны увидеть сообщение `Hello World!`.
