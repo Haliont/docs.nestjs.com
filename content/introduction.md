@@ -6,24 +6,24 @@ Nest (NestJS) это фреймворк для построения эффект
 
 Nest предоставляет уровень абстракции над этими Node.js фреймворками (Express/Fastify), но так же предоставляет их API для разработчика. Это позволяет разработчикам свободно использвать большое множество сторонних модулей которые доступны для базовой платформы.
 
-#### Philosophy
+#### Философия
 
-In recent years, thanks to Node.js, JavaScript has become the “lingua franca” of the web for both front and backend applications. This has given rise to awesome projects like [Angular](https://angular.io/), [React](https://github.com/facebook/react) and [Vue](https://github.com/vuejs/vue), which improve developer productivity and enable the creation of fast, testable, and extensible frontend applications. However, while plenty of superb libraries, helpers, and tools exist for Node (and server-side JavaScript), none of them effectively solve the main problem of - **Architecture**.
+За последние годы, спасибо Node.js, JavaScript стал "лингва франка" от веба для frontend и backend приложений. Это породило такие удивительные проекты как [Angular](https://angular.io/), [React](https://github.com/facebook/react) and [Vue](https://github.com/vuejs/vue), которые повышают производительность разработчиков и позволяют создавать быстрые, тестируемые, и расширяемые frontend приложения. Однако, в то время как множество превосходных библиотек, хелперов, и инструментов существуют для Node (и сервер-сайд JavaScript), ни один из них не решает эффективно главную проблему - **Архитектура**.
 
-Nest provides an out-of-the-box application architecture which allows developers and teams to create highly testable, scalable, loosely coupled, and easily maintainable applications.
+Nest из коробки предоставляет архитектуру приложения которая позволяет разработчикам и командам создавать высоко тестируемые, расширяемые, слабосвязанные и легко поддерживаемые приложения.
 
-#### Installation
+#### Установка
 
-To get started, you can either scaffold the project with the [Nest CLI](/cli/overview), or clone a starter project (both will produce the same outcome).
+Чтобы начать работу, можно воспользоваться [Nest CLI](/cli/overview) либо склонировать стартовый репозиторий (в обоих случаях получишь тот же самый результат).
 
-To scaffold the project with the Nest CLI, run the following commands. This will create a new project directory, and populate the directory with the initial core Nest files and supporting modules, creating a conventional base structure for your project. Creating a new project with the **Nest CLI** is recommended for first-time users. We'll continue with this approach in [First Steps](first-steps).
+Чтобы создать проект с помощью Nest CLI нужно выполнить следующие команды. После их выполнения будет создана директория с проектом в которой будут основные файлы Nest и вспомогательные модули для базовой структуры проекта. Создание нового проекта с помощью **Nest CLI** более предпочтительный способ для новичков. Мы им пользоваться в разделе [Первые Шаги](first-steps).
 
 ```bash
 $ npm i -g @nestjs/cli
 $ nest new project-name
 ```
 
-Alternatively, to install the TypeScript starter project with **Git**:
+Альтернативный способ - склонировать бойлерплейт с помощью **Git**:
 
 ```bash
 $ git clone https://github.com/nestjs/typescript-starter.git project
@@ -32,17 +32,17 @@ $ npm install
 $ npm run start
 ```
 
-Open your browser and navigate to `http://localhost:3000/`.
+Открой браузер и перейди по адресу `http://localhost:3000/`.
 
-To install the JavaScript flavor of the starter project, use `javascript-starter.git` in the command sequence above.
+Для установки бойлерплейта с JavaScript нужно заменить `typescript-starter.git` на `javascript-starter.git` в первой команде выше.
 
-You can also manually create a new project from scratch by installing the core and supporting files with **npm** (or **yarn**). In this case, of course, you'll be responsible for creating the project boilerplate files yourself.
+Также можно вручную, с нуля, создать новый проект, установив основные и вспомогательные пакеты через **npm** (либо **yarn**). В таком случае вы сами ответственны за то что вы делаете.
 
 ```bash
 $ npm i --save @nestjs/core @nestjs/common rxjs reflect-metadata
 ```
 
-#### Stay in touch
+#### Контакты
 
 - Website - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
