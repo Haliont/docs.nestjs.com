@@ -1,4 +1,4 @@
-<p aling="center">
+<p align="center">
   Русская документация по Nest.js
 </p>
 
