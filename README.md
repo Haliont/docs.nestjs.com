@@ -11,7 +11,8 @@
 [linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
 [linux-url]: https://travis-ci.org/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="_blank">Angular</a>.</p>
+<p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="_blank">Angular</a>.</p>
+<p align="center">Прогрессивный <a href="http://nodejs.org" target="_blank">Node.js</a> фреймворк для разработки эффективных и масштабируемых серверных приложений, вдохновленный фреймворком <a href="https://angular.io" target="_blank">Angular</a>.</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
@@ -29,40 +30,40 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Описание
 
-This project is built on top of the [Angular CLI](https://github.com/angular/angular-cli). It uses the [Dgeni documentation generator](https://github.com/angular/dgeni) to compile source documentation in markdown format into the published format. The Repository contains [docs.nestjs.com](https://docs.nestjs.com) source code, the official Nest documentation.
+Этот проект разработан с помощью [Angular CLI](https://github.com/angular/angular-cli). В нем используется [генератор документации Dgeni](https://github.com/angular/dgeni) для компилирования исходников докуметации из формата markdown в формат для пуликации. Этот репозиторий содержит исходники перевод официальной документации Nest на русский язык.
 
-## Installing
+## Установка
 
-Install project dependencies and start a local server with the following terminal commands:
+Установите зависимости и запустите локальный сервер выполнив следующие команды:
 
 ```bash
 $ npm install
 $ npm run start
 ```
 
-Navigate to [`http://localhost:4200/`](http://localhost:4200/).
+Перейдите по адресу [`http://localhost:4200/`](http://localhost:4200/).
 
-All pages are written in [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and located in the `content` directory.
+Все страницы написаны на [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) и расположенны в директории `content`.
 
-## Build
+## Сборка
 
-Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Выполните команду `npm run build` для сборки проекта. Результат сборки будет находится в директрии `dist/`.
 
-To run build in _watch mode_, run `npm run build:watch`. Any content changes will be recompiled and rebuilt, and the content served at [`http://localhost:4200/`](http://localhost:4200/).
+Для сборки в _режиме наблюдения_, выполните команду `npm run build:watch`. При любом изменении содержимого будет происходить пересборка, так же будет запущен сервер по адресу [`http://localhost:4200/`](http://localhost:4200/).
 
-Use `npm run build:prod` for a production build.
+Используйте команду `npm run build:prod` для продакшен сборки.
 
-## Support
+## Стать спонсором
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://opencollective.com/nest).
+Nest это open source проект с лицензией MIT. Он может развиваться благодаря поддержке спонсоров. Если вы хотите им стать посетите [эту страницу](https://opencollective.com/nest).
 
-## Stay in touch
+## Контакты
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Автор - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
+- Вебсайт - [https://nestjs.com](https://nestjs.com/)
+- Твиттер - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
