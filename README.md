@@ -1,3 +1,7 @@
+<p aling="center">
+  Русская документация по Nest.js
+</p>
+
 <p align="center">
   <a href="http://nestjs.com/" target="_blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
